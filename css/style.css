@@ -960,17 +960,31 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 
 .solutions section li,
 .expertises section li{
+	position:relative;
 	padding:50px 0;
 	text-align:center;
+}
+.solutions section > ul > li,
+.expertises section > ul > li{
+	position:relative;
+}
+.solutions section > ul > li .img-back,
+.expertises section > ul > li .img-back{
+	position:absolute;
+	top:0;left:0;
+	width:100%;height:100%;
 
-	background-color:#fff;
+	opacity:0;
+	visibility:hidden;
 	-webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
-.solutions section li:hover{
-	background-color:#1e9c5b;
+.solutions section > ul > li:hover .img-back,
+.expertises section > ul > li:hover .img-back{
+	opacity:1;
+	visibility:visible;
 }
 .solutions section li img{margin-bottom:30px;}
 .solutions section li h3,
@@ -1010,10 +1024,6 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	color:#fff;
 }
 
-.expertises section > ul > li:nth-child(2){
-	background:url(../img/back-expertises-li2.jpg) no-repeat center;
-	background-size:cover;
-}
 .expertises li .chiffre{
 	font-weight:700;
 	font-size:60px;font-size:6rem;
@@ -1031,6 +1041,18 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	font-weight:700;
 	margin-top:10px;
 }
+.expertises li:hover .chiffre,
+.expertises section li:hover p,
+.expertises section li:hover h3,
+.expertises section li:hover h4{
+	color:#fff;
+}
+.expertises section li:hover .icon-svg{
+	background-color:#fff;
+}
+.expertises section .services{
+	position:relative;
+}
 .expertises section .services li{
 	display:inline-block;
 	vertical-align:top;
@@ -1039,16 +1061,6 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	padding:0 20px;
 	box-sizing:border-box;
 }
-.expertises section li:nth-child(2) h3,
-.expertises section li:nth-child(2) h4,
-.expertises section li:nth-child(2) p{
-	color:#fff;
-}
-.expertises section li:first-child li:nth-child(2) h4,
-.expertises section li:last-child li:nth-child(2) h4{
-	color:#333;
-}
-.expertises section li:nth-child(2) .services li .icon-svg{background-color:#fff;}
 .expertises section.question{
 	position:relative;
 	width:100%;
