@@ -42,7 +42,7 @@ h2{
 	font-size:20px;font-size:2rem;
 	text-align:center;
 }
-.a-propos h2{padding-bottom:0;margin-top:15px;}
+.a-propos h2, .blog h2{padding-bottom:0;margin-top:15px;}
 h2:after{
 	content:'';
 	display:block;
@@ -54,7 +54,7 @@ h2:after{
 		-ms-transform: translate(-50%, 0);
 			transform: translate(-50%, 0);
 }
-.a-propos h2:after{
+.a-propos h2:after, .blog h2:after{
 	display:none;
 }
 h3{
@@ -163,6 +163,9 @@ nav{
        -moz-transition:background-color .3s ease, height .4s .5s ease;
     	 -o-transition:background-color .3s ease, height .4s .5s ease;
     		transition:background-color .3s ease, height .4s .5s ease;
+}
+.blog nav{
+	background-color:#0c182c;
 }
 nav.on{
 	background-color:#0c182c;
@@ -1097,6 +1100,93 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	border: 1px solid rgb(255,255,255);
     border: 1px solid rgba(255,255,255,1);
 }
+
+.blog .articles{
+	padding:126px 0 50px 0;
+}
+.blog .articles h6,
+.blog .articles .articles-categories li a,
+.blog .list .article-infos h4{
+	font-weight:700;
+	font-size:12px;font-size:1.2rem;
+	text-align:center;
+	text-transform:uppercase;
+}
+.blog .articles .articles-categories{
+	margin:38px 0 50px 0;
+	text-align:center;
+}
+.blog .articles .articles-categories li{
+	display:inline-block;
+	vertical-align:top;
+	width:20%;
+}
+.blog .articles li .digital{color:#f3b32a;}
+.blog .articles li .business{color:#da453d;}
+.blog .articles li .testimonials{color:#4788f2;}
+.blog .articles li .event{color:#1e9c5b;}
+.blog .list .content{
+	max-width:1024px;
+}
+.blog .list .content ul{text-align:center;}
+.blog .list li{
+	width:306px;height:298px;
+	padding-bottom:14px;
+}
+.blog .list li:nth-child(12n+1),
+.blog .list li:nth-child(12n+7){
+	width:666px;height:596px;
+	padding-bottom:14px;
+}
+.blog .list li:nth-child(12n+5),
+.blog .list li:nth-child(12n+11){
+	display:inline-block;
+	vertical-align:top;
+}
+.blog .list li:nth-child(12n+1),
+.blog .list li:nth-child(12n+8),
+.blog .list li:nth-child(12n+9),
+.blog .list li:nth-child(12n+4),
+.blog .list li:nth-child(12n+10){
+	float:left;
+}
+.blog .list li:nth-child(12n+7),
+.blog .list li:nth-child(12n+2),
+.blog .list li:nth-child(12n+3),
+.blog .list li:nth-child(12n+6),
+.blog .list li:nth-child(12n+12){
+	float:right;
+}
+.blog .list li img{
+	width:100%;height:auto;
+}
+.blog .list .article-infos{
+	position:relative;
+	width:90%;
+	margin:-40px auto 0 auto;
+	padding:15px 5%;
+	text-align:center;
+	z-index:1;
+	background:#fff;
+}
+.blog .list li:nth-child(12n+1) .article-infos,
+.blog .list li:nth-child(12n+7) .article-infos{
+	margin:-70px auto 0 auto;
+}
+.blog .list .article-infos h5{
+	font-weight:400;
+	color:#333;
+	font-size:10px;font-size:1.0rem;
+	margin:10px 0 20px 0;
+}
+.blog .list .article-infos h3{
+	font-weight:100;
+	font-size:20px;font-size:2.0rem;
+}
+.blog .list li:nth-child(12n+1) .article-infos h3,
+.blog .list li:nth-child(12n+7) .article-infos h3{
+	font-size:30px;font-size:3.0rem;
+}
 /************************* END CONTENT ******************************/
 
 /********************************************************************/
@@ -1235,6 +1325,19 @@ footer .content .social li a.viadeo{
 			line-height:16px;line-height:1.6rem;
 			padding:0 5px;
 		}
+
+		.blog .list li{
+			width:306px !important;
+			height:298px !important;
+			float:none !important;
+			display:inline-block;
+			vertical-align:top;
+			margin:0 1%;
+		}
+		.blog .list .article-infos h3{
+			font-size:20px !important;
+			font-size:2.0rem !important;
+		}
 	}
 	@media screen and (max-width: 800px) {
 		section.six .references-galerie li {
@@ -1330,6 +1433,17 @@ footer .content .social li a.viadeo{
 		section.six .references-galerie li .active-infos a:hover{
 			border:1px solid rgb(255,255,255);
 		    border:1px solid rgba(255,255,255,.3);
+		}
+
+		.blog .list li{
+			width:100% !important;
+			height:auto !important;
+			display:block;
+			margin:0;
+		}
+		.blog .list .article-infos h3{
+			font-size:20px !important;
+			font-size:2.0rem !important;
 		}
 
 		footer .content > ul > li > ul{
@@ -1446,6 +1560,12 @@ footer .content .social li a.viadeo{
 	}
 	@media screen and (max-width: 460px) {
 		section.third img.big, section.third img.small{display:none}
+
+		.blog .articles .articles-categories li {
+		    display:block;
+		    width:100%;
+		    margin-bottom:5px;
+		}
 	}
 	@media screen and (max-width: 390px) {
 		section.four .content {
