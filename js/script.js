@@ -8,6 +8,17 @@ $(function(){
         }else{
             $('nav').removeClass('on');
         }
+        if($('.article-content .buttons').length>0 && $(window).innerWidth()>1024){
+            if($(window).scrollTop()>=479){
+                $('.article-content .buttons').css('position', 'fixed');
+                $('.article-content .buttons').css('top', '139px');
+                $('.article-content .buttons').css('left', '158px');
+            }else{
+                $('.article-content .buttons').css('position', 'absolute');
+                $('.article-content .buttons').css('top', '60px');
+                $('.article-content .buttons').css('left', '30px');
+            }
+        }
     });
 
     // menu responsive and menu-button animation
