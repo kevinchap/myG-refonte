@@ -20,7 +20,7 @@ body{
 }
 a{
 	font-weight:700;
-	font-size:12px;font-size:1.2rem;
+	font-size:11px;font-size:1.1rem;
 	text-transform:uppercase;
 	cursor:pointer !important;
 	color:#fff;
@@ -30,14 +30,14 @@ h1{
 	font-size:36px;font-size:3.6rem;
 	line-height:50px;line-height:5rem;
 	color:#FFF;
-	margin-bottom:15px;
+	margin-bottom:30px;
 }
 h2{
 	display:block;
 	position:relative;
 	width:100%;
 	padding-bottom:35px;
-	margin-bottom:38px;
+	margin-bottom:50px;
 	font-weight:300;
 	font-size:20px;font-size:2rem;
 	text-align:center;
@@ -87,8 +87,8 @@ strong{
 .cross{
 	display:inline-block;
 	position:relative;
-	width:23px;height:23px;
-	margin-top:12.5px;
+	width:35px;height:35px;
+	margin-top:30px;
 	cursor:pointer;
 
 	border:1px solid rgb(255,255,255);
@@ -236,7 +236,8 @@ nav ul li:after{
 .solutions nav ul li:after, 
 .expertises nav ul li:after,
 .evenement nav ul li:after{background-color:#fff;}
-nav ul li:hover:after{
+nav ul li:hover:after,
+nav ul li.current:after{
 	opacity:1;
 	visibility:visible;
 }
@@ -250,9 +251,10 @@ nav ul li a{
 nav ul li:hover a{color:#f3b32a;}
 .solutions nav ul li:hover a,
 .expertises nav ul li:hover a,
-.evenement nav ul li:hover a{color:#fff;}
+.evenement nav ul li:hover a,
+.solutions nav ul li.current a{color:#fff;}
 nav ul li.contact a{
-	padding:10px 20px;
+	padding:12px 22px;
 	color:#f3b32a;
 	border:1px solid #f3b32a;
 }
@@ -386,7 +388,7 @@ header a:hover{
 /********************************************************************/
 section.first,
 section.formats{
-	padding:50px 0;
+	padding:80px 0;
 }
 section.first p{
 	color:#4d4d4d;
@@ -409,6 +411,9 @@ section.second ul li{
 }
 .a-propos section.second ul li {
     width: 20%;
+}
+.a-propos section.second ul li:nth-child(3){
+	border-left:none;border-right:none;
 }
 .evenement section.second ul li{
 	height:375px;
@@ -464,6 +469,7 @@ section.second ul li:hover .icon svg path{
 	background-color:#fff;
 }
 section.second ul li h3{
+	font-size:14px;font-size:1.4rem;
 	margin-bottom:18px;
 	-webkit-transition:all .3s ease-in-out;
        -moz-transition:all .3s ease-in-out;
@@ -520,7 +526,7 @@ section.second ul li:hover a{
 }
 
 section.third{
-	padding-top:50px;
+	padding-top:80px;
 	background-color:#1e9c5b;
 }
 section.third h2{
@@ -536,7 +542,7 @@ section.third h2 img{
 section.third ul{
 	width:100%;
 	text-align:center;
-	margin-top:32.5px;
+	margin-top:70px;
 }
 section.third ul li{
 	display:inline-block;
@@ -546,17 +552,17 @@ section.third ul li{
 section.third ul li:first-child{float:left;margin-top:25px;}
 section.third ul li:last-child{float:right;margin-top:25px;}
 section.third ul li img{
-	margin-bottom:10px;
+	margin-bottom:15px;
+	width:50px;
 }
 section.third ul li h4{
 	font-weight:300;
-	font-size:18px;font-size:1.8rem;
 	color:#fff;
 }
 section.third img.big{
 	display:block;
 	position:relative;
-	margin:0 auto;
+	margin:40px auto 0 auto;
 	width:55%;
 	z-index:1;
 }
@@ -572,7 +578,7 @@ section.third img.small-right{right:0;}
 section.four{
 	position:relative;
 	background-color:#0c182c;
-	padding:50px 0;
+	padding:80px 0;
 }
 section.four .back-four{
 	position:absolute;
@@ -593,6 +599,7 @@ section.four h2:after{
 section.four .content-slide{
 	position:relative;
 	width:100%;min-height:224px;
+	margin:70px 0 40px 0;
 }
 section.four .content-slide .slide{
 	position:absolute;
@@ -644,6 +651,7 @@ section.four h5{
 section.four h6{
 	margin-top:8px;
 	font-weight:300;
+	font-size:14px;font-size:1.4rem;
 	color:#4788f2;
 }
 section.four .where img, section.four .where h5{
@@ -672,7 +680,7 @@ section.four ul li{
 section.four ul li .puce{
 	display:inline-block;
 	position:relative;
-	width:40px;height:40px;
+	width:30px;height:30px;
 	border-radius:100%;
 	box-sizing:border-box;
 	overflow:hidden;
@@ -743,7 +751,7 @@ section.four button.right{
 }
 
 section.five{
-	padding:50px 0;
+	padding:80px 0;
 }
 section.five h2{
 	color:#333333;
@@ -762,7 +770,7 @@ section.five .adress, section.five .phone{
 section.five .adress .icon, section.five .phone .icon{
 	display:inline-block;
 	width:42px;height:42px;
-	margin-bottom:15px;
+	margin-bottom:20px;
 }
 section.five .adress p, section.five .phone p{
 	font-weight:700;
@@ -770,18 +778,18 @@ section.five .adress p, section.five .phone p{
 	line-height:20px;line-height:2rem;
 	color:#333333;
 }
-section.five form{margin-top:30px;}
+section.five form{margin-top:50px;}
 section.five form .left, section.five form .right{width:50%;}
 section.five form .right{text-align:right;}
 section.five form input[type="text"], section.five form textarea{
 	display:inline-block;
 	width:100%;
-	font-weight:700;
-	font-size:14px;font-size:1.4rem;
+	font-weight:500;
+	font-size:12px;font-size:1.2rem;
 	color:#bfbfbf;
-	padding:12.5px 10px;
+	padding:20px 15px;
 	border:1px solid #ededed;
-	margin:15px 0;
+	margin:10px 0;
 }
 section.five form input[type="text"]{width:97%;}
 section.five form textarea{min-height:200px;}
@@ -789,10 +797,10 @@ section.five input[type="submit"]{
 	display:block;
 	padding:20px 50px;
 	max-width:160px;
-	margin:15px auto 0 auto;
+	margin:30px auto 0 auto;
 	background:none;
 	font-weight:700;
-	font-size:12px;font-size:1.2rem;
+	font-size:11px;font-size:1.1rem;
 	color:#1e9c5b;
 	text-transform:uppercase;
 	cursor:pointer;
@@ -1532,14 +1540,11 @@ footer .content > ul > li > ul > li > a{
 	color:rgb(255,255,255);
 	color:rgba(255,255,255,.5);
 }
-footer .select-wrapper select {
-	padding: 10px 50px 10px 20px;
+select::-ms-expand {
+    display: none;
+}
+footer .select-wrapper{
 	margin-top:-11px;
-	font-family:'Roboto', sans-serif;
-	font-weight:700;
-	color:#fff;
-	font-size:10px;font-size:1rem;
-	text-transform:uppercase;
 	border-radius:0;
 	-webkit-appearance: none;
 	cursor:pointer;
@@ -1555,7 +1560,18 @@ footer .select-wrapper select {
     	 -o-transition:all .3s ease-in-out;
     		transition:all .3s ease-in-out;
 }
-footer .select-wrapper:hover select{
+footer .select-wrapper select{
+	padding: 10px 50px 10px 20px;
+	font-family:'Roboto', sans-serif;
+	font-weight:700;
+	color:#fff;
+	font-size:10px;font-size:1rem;
+	text-transform:uppercase;
+	-moz-appearance:none;
+	-webkit-appearance: none;
+	border:none;background:transparent;
+}
+footer .select-wrapper:hover{
 	border:1px solid rgb(255,255,255);
 	border:1px solid rgba(255,255,255,1);
 }
@@ -1579,8 +1595,6 @@ footer .content .social li a{
 }
 footer .content .social li a.viadeo{
 	width:16px;height:16px;
-	background:url(../img/viadeo.svg) no-repeat center;
-	background-size:contain;
 }
 /*************************** END FOOTER *****************************/
 
@@ -1727,6 +1741,10 @@ footer .content .social li a.viadeo{
 		}
 		.a-propos section.second ul li:nth-child(2), .a-propos section.second ul li:nth-child(3){
 			border-top:none;
+		}
+		.a-propos section.second ul li{
+			border-left:1px solid #e5e5e5 !important;
+			border-right:1px solid #e5e5e5 !important;
 		}
 
 		section.four .content-slide {
