@@ -70,6 +70,18 @@ $(function(){
         //     }
         // });
 
+    // SUBMIT BUTTON ANIMATION
+    $('section.five form').submit(function () {
+        var that = this;
+        $(this).find('input[type="submit"]').addClass('active');
+        $(this).find('.submit-anim').addClass('active');
+        setTimeout(function(){
+            $(that).find('input[type="submit"]').removeClass('active');
+            $(that).find('.submit-anim').removeClass('active');
+        },4500);
+        return false;
+    });
+
     // SLIDER TEAM
     var delta = $('section .team-slider').width()*2;
     function launchSlideTeam(dir){

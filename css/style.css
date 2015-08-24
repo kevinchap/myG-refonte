@@ -149,16 +149,16 @@ strong{
 	top:6px;
 	top:9px;left:4px;
 }
-/*body.noscroll {
+body.noscroll {
     overflow: hidden;
-}*/
+}
 
 /********************************************************************/
 /*                              NAV                                 */
 /********************************************************************/
 nav{
 	position:fixed;
-	height:76px;
+	height:105px;
 	width:100%;
 	top:0;
 	z-index:3;
@@ -172,6 +172,7 @@ nav{
 	background-color:#0c182c;
 }
 nav.on{
+	height:76px;
 	background-color:#0c182c;
 }
 .solutions nav.on{
@@ -204,6 +205,13 @@ nav #logo{
 	-webkit-transform: translate(-110%, 0);
 		-ms-transform: translate(-110%, 0);
 			transform: translate(-110%, 0);
+	-webkit-transition:all .3s ease;
+       -moz-transition:all .3s ease;
+    	 -o-transition:all .3s ease;
+    		transition:all .3s ease;
+}
+nav.on #logo{
+	width:80px;
 }
 nav ul{
 	width:95%;height:100%;
@@ -216,7 +224,13 @@ nav ul li{
 	vertical-align:middle;
 	margin-left:20px;
 	height:100%;
+	line-height:105px;
+}
+nav.on ul li{
 	line-height:76px;
+}
+nav.active ul li{
+	line-height:40px;line-height:4rem;
 }
 nav ul li:after{
 	content:'';
@@ -793,12 +807,73 @@ section.five form input[type="text"], section.five form textarea{
 }
 section.five form input[type="text"]{width:97%;}
 section.five form textarea{min-height:200px;}
+section.five .container-submit{
+	position:relative;
+}
+section.five .submit-anim{
+	display:block;
+	position:absolute;
+	z-index:1;
+	width:156px;height:25px;
+	left:50%;top:0;
+	-webkit-transform: translate(-50%, 0);
+		-ms-transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
+	border:1px solid #1e9c5b;
+}
+section.five .submit-anim::before{
+	content:'';
+	display:block;
+	position:absolute;
+	width:0;height:100%;
+	left:0;top:0;
+	background:#1e9c5b;
+	-webkit-transition:all 0s ease-in-out, background 0s 0s ease-in-out;
+       -moz-transition:all 0s ease-in-out, background 0s 0s ease-in-out;
+    	 -o-transition:all 0s ease-in-out, background 0s 0s ease-in-out;
+    		transition:all 0s ease-in-out, background 0s 0s ease-in-out;
+}
+section.five .submit-anim.active::before{
+	-webkit-transition:all 3s .4s ease-in-out, background .3s 3.2s ease-in-out;
+       -moz-transition:all 3s .4s ease-in-out, background .3s 3.2s ease-in-out;
+    	 -o-transition:all 3s .4s ease-in-out, background .3s 3.2s ease-in-out;
+    		transition:all 3s .4s ease-in-out, background .3s 3.2s ease-in-out;
+	background:transparent;
+	width:100%;
+}
+section.five .submit-anim i{
+	display:block;
+	position:absolute;
+	top:50%;left:50%;
+	-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+	font-size:11px;font-size:1.1rem;
+	color:#1e9c5b;
+
+	opacity:0;
+	visibility:hidden;
+	-webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+    	 -o-transition: all .3s ease-in-out;
+    		transition: all .3s ease-in-out;
+}
+section.five .submit-anim.active i{
+	-webkit-transition: all .3s 3.2s ease-in-out;
+       -moz-transition: all .3s 3.2s ease-in-out;
+    	 -o-transition: all .3s 3.2s ease-in-out;
+    		transition: all .3s 3.2s ease-in-out;
+	opacity:1;visibility:visible;
+}
 section.five input[type="submit"]{
 	display:block;
+	position:relative;
+	z-index:2;
 	padding:20px 50px;
 	max-width:160px;
+	width:156px;
 	margin:30px auto 0 auto;
-	background:none;
+	background:white;
 	font-weight:700;
 	font-size:11px;font-size:1.1rem;
 	color:#1e9c5b;
@@ -806,10 +881,20 @@ section.five input[type="submit"]{
 	cursor:pointer;
 
 	border:1px solid #c7e6d6;
-	-webkit-transition:all .3s ease-in-out;
-       -moz-transition:all .3s ease-in-out;
-    	 -o-transition:all .3s ease-in-out;
-    		transition:all .3s ease-in-out;
+	-webkit-transition:all .3s ease-in-out, background 0s 0s ease;
+       -moz-transition:all .3s ease-in-out, background 0s 0s ease;
+    	 -o-transition:all .3s ease-in-out, background 0s 0s ease;
+    		transition:all .3s ease-in-out, background 0s 0s ease;
+}
+section.five input[type="submit"].active{
+	-webkit-transition:all .3s ease-in-out, background 0s .3s ease;
+       -moz-transition:all .3s ease-in-out, background 0s .3s ease;
+    	 -o-transition:all .3s ease-in-out, background 0s .3s ease;
+    		transition:all .3s ease-in-out, background 0s .3s ease;
+	color:transparent;
+	padding:5px 50px;
+	border:1px solid #1e9c5b;
+	background:transparent;
 }
 section.five input[type="submit"]:hover{
 	border:1px solid #1e9c5b;
@@ -1617,9 +1702,7 @@ footer .content .social li a.viadeo{
 			border-left:1px solid #e5e5e5;
 		}
 	}
-	@media screen and (max-width: 1024px) {
-		.content{padding:0 10px;}
-
+	@media screen and (max-width: 1085px) {
 		nav #logo{
 			position:absolute;
 			left:10px;
@@ -1627,6 +1710,9 @@ footer .content .social li a.viadeo{
 				-ms-transform: translate(0, 0);
 					transform: translate(0, 0);
 		}
+	}
+	@media screen and (max-width: 1024px) {
+		.content{padding:0 10px;}
 
 		section.four .content{
 			width:calc(100% - 100px);
