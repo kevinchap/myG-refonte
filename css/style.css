@@ -1214,6 +1214,7 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	background:#fff;
 	background-size:cover;
 	text-align:center;
+	border-top:1px solid #e5e5e5;
 }
 .expertises section.question div{
 	position:absolute;
