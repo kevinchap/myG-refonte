@@ -502,7 +502,8 @@ section.second ul li:hover h3{
 	color:#fff;
 }
 section.second p{
-	font-weight:400;
+	font-weight:300;
+	font-size:14px;font-size:1.4rem;
 	line-height:30px;line-height:3rem;
 
 	opacity:0;
