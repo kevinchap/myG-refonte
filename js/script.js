@@ -3,7 +3,7 @@
 $(function(){
     // nav background change on scroll
 	$(window).scroll(function (event) {
-        if($(window).scrollTop()>0){
+        if($(window).scrollTop()>50){
             $('nav').addClass('on');
         }else{
             $('nav').removeClass('on');

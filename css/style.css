@@ -172,6 +172,10 @@ nav{
 	background-color:#0c182c;
 }
 nav.on{
+	-webkit-transition:background-color .3s ease, height .4s ease;
+       -moz-transition:background-color .3s ease, height .4s ease;
+    	 -o-transition:background-color .3s ease, height .4s ease;
+    		transition:background-color .3s ease, height .4s ease;
 	height:76px;
 	background-color:#0c182c;
 }
@@ -552,7 +556,7 @@ section.third h2{
 section.third h2:after{
 	background-color:#3cb57c;
 }
-section.third h2 img{
+section.third h2 svg{
 	display:inline-block;
 	vertical-align:middle;
 }
@@ -568,7 +572,8 @@ section.third ul li{
 }
 section.third ul li:first-child{float:left;margin-top:25px;}
 section.third ul li:last-child{float:right;margin-top:25px;}
-section.third ul li img{
+section.third ul li img,
+section.third ul li svg{
 	margin-bottom:15px;
 	width:50px;
 }
@@ -678,11 +683,12 @@ section.four h6{
 	font-size:14px;font-size:1.4rem;
 	color:#4788f2;
 }
-section.four .where img, section.four .where h5{
+section.four .where .where-img, 
+section.four .where h5{
 	display:inline-block;
 	vertical-align:middle;
 }
-section.four .where img{margin-right:10px;}
+section.four .where .where-img{margin-right:10px;}
 section.four p{
 	font-weight:300;
 	font-style:italic;
