@@ -1262,8 +1262,8 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 }
 .blog .list li:nth-child(12n+5),
 .blog .list li:nth-child(12n+11){
-	display:inline-block;
-	vertical-align:top;
+	float:left;
+	margin:0 5%;
 }
 .blog .list li:nth-child(12n+1),
 .blog .list li:nth-child(12n+8),
@@ -1739,7 +1739,7 @@ footer .content .social li a.viadeo{
 			float:none !important;
 			display:inline-block;
 			vertical-align:top;
-			margin:0 1%;
+			margin:0 1% !important;
 		}
 		.blog .list .article-infos h3{
 			font-size:20px !important;
