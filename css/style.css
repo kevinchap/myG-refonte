@@ -1126,7 +1126,7 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 .expertises section > ul > li{
 	position:relative;
 }
-.solutions section > ul > li .img-back,
+.solutions section > ul > li:nth-child(2n) .img-back,
 .expertises section > ul > li .img-back{
 	position:absolute;
 	top:0;left:0;
@@ -1134,7 +1134,8 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	opacity:1;
 	visibility:visible;
 }
-.solutions section li img{margin-bottom:30px;}
+.solutions section li img,
+.solutions section li svg{margin-bottom:30px;}
 .solutions section li h3,
 .expertises section li h3{
 	font-weight:300;
@@ -1145,31 +1146,43 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 .solutions section li h4{
 	font-weight:700;
 	color:#333;
-	margin:10px 0 25px 0;
+	margin:15px 0 40px 0;
 }
 .solutions section li p,
 .expertises section li p{
 	color:#333;
 }
-.solutions section li .buttons{margin-top: 37px;}
+.solutions section li .buttons{margin-top: 50px;}
 .solutions section li a{
 	display: inline-block;
 	color:#1e9c5b;
     padding: 20px 50px;  
     margin:0 20px;
-    border: 1px solid #ceecde;
+  	border: 1px solid rgb(60, 181, 124);
+	border: 1px solid rgba(60, 181, 124, .25);
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
-.solutions section li a:hover{border: 1px solid #fff;}
-.solutions section li:hover h3,
-.solutions section li:hover h4,
-.solutions section li:hover p,
-.solutions section li:hover a{
+.solutions section li a:hover{
+	border: 1px solid rgba(60, 181, 124, 1);
+}
+section > ul > li:nth-child(2n) a{
+	border: 1px solid rgb(255, 255, 255);
+	border: 1px solid rgba(255, 255, 255, .25);
+}
+section > ul > li:nth-child(2n) a:hover{
+	border: 1px solid rgba(255, 255, 255, 1);
+}
+/*.solutions section li a:hover{border: 1px solid #fff;}*/
+.solutions section > ul > li:nth-child(2n) h3,
+.solutions section > ul > li:nth-child(2n) h4,
+.solutions section > ul > li:nth-child(2n) p,
+.solutions section > ul > li:nth-child(2n) a{
 	color:#fff;
 }
+
 
 .expertises section li p{
 	margin:40px 0;
@@ -1226,7 +1239,7 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 }
 .expertises section.question h6{
 	font-weight:300;
-	font-size:22px;font-size:2.2rem;
+	font-size:20px;font-size:2rem;
 }
 .expertises section.question a{
 	display: inline-block;
