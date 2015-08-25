@@ -200,11 +200,11 @@ nav .content:before{
 }
 nav #logo{
 	position:absolute;
-	left:0;top:10px;
+	left:10px;top:10px;
 	z-index:1;
-	-webkit-transform: translate(-110%, 0);
-		-ms-transform: translate(-110%, 0);
-			transform: translate(-110%, 0);
+	-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+			transform: translate(0, 0);
 	-webkit-transition:all .3s ease;
        -moz-transition:all .3s ease;
     	 -o-transition:all .3s ease;
@@ -373,7 +373,10 @@ header .vertical-align{
 		-ms-transform: translate(0, -50%);
 			transform: translate(0, -50%);
 }
-header img{margin-bottom:30px;}
+header #google_partner{
+	display:block;
+	margin:30px auto 0 auto;
+}
 header p{color:#f3b32a;}
 .solutions header p,
 .expertises header p,
@@ -599,6 +602,13 @@ section.four .back-four{
 	width:100%;height:100%;
 	top:0;left:0;
 	z-index:0;
+
+	opacity:1;
+	visibility:visible;
+	-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 section.four .back-four.na{
 	opacity:0;
@@ -1086,7 +1096,7 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 .solutions section li,
 .expertises section li{
 	position:relative;
-	padding:50px 0;
+	padding:70px 0;
 	text-align:center;
 }
 .solutions section > ul > li,
@@ -1127,7 +1137,6 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 .solutions section li p,
 .expertises section li p{
 	color:#333;
-	font-size:14px;font-size:1.4rem;
 }
 .solutions section li .buttons{margin-top: 37px;}
 .solutions section li a{
@@ -1149,16 +1158,17 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	color:#fff;
 }
 
+.expertises section li p{
+	margin:40px 0;
+}
 .expertises li .chiffre{
 	font-weight:700;
 	font-size:60px;font-size:6rem;
 	color:#f3b32a;
 	line-height:normal;
 	margin-bottom:10px;
-}
-.expertises section li p{
-	margin:25px 0;
-	padding:0 30px;
+	padding:0;
+	margin-top:0;
 }
 .expertises section li h4{
 	font-size:14px;font-size:1.4rem;
@@ -1703,13 +1713,13 @@ footer .content .social li a.viadeo{
 		}
 	}
 	@media screen and (max-width: 1085px) {
-		nav #logo{
+		/*nav #logo{
 			position:absolute;
 			left:10px;
 			-webkit-transform: translate(0, 0);
 				-ms-transform: translate(0, 0);
 					transform: translate(0, 0);
-		}
+		}*/
 	}
 	@media screen and (max-width: 1024px) {
 		.content{padding:0 10px;}
