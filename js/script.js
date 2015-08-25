@@ -3,7 +3,7 @@
 $(function(){
     // nav background change on scroll
 	$(window).scroll(function (event) {
-        if($(window).scrollTop()>50){
+        if($(window).scrollTop()>0){
             $('nav').addClass('on');
         }else{
             $('nav').removeClass('on');
@@ -103,6 +103,7 @@ $(function(){
 
     // GALERIE REFERENCE CLICK BUTTON
     $('section.six .references-galerie .cross').click(function(){
+        $('section.six .references-galerie li').removeClass('active');
         $(this).parent().parent().parent().parent().addClass('active');
     });
     $('section.six .references-galerie .close').click(function(){

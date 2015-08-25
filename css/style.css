@@ -65,7 +65,7 @@ h3{
 }
 p{
 	color:#FFF;
-	line-height:28px;line-height:2.8rem;
+	line-height:30px;line-height:3rem;
 	text-align:center;
 }
 strong{
@@ -77,9 +77,11 @@ strong{
 .icon-svg{
 	display:block;
 	height:50px;
-	width:30px;
 	margin:0 auto;
-	background:#f3b32a;
+}
+.icon-svg path,
+.icon-path path{
+	fill:#f3b32a;
 }
 .evenement .icon-svg{
 	background:#da453d;
@@ -471,7 +473,6 @@ section.second ul li:hover .expertise-li-content{
 section.second .icon{
 	display:inline-block;
 	width:100%;height:86px;
-	margin-bottom:10px;
 	text-align:center;
 }
 section.second .icon svg path, .a-propos section.second .icon-svg{
@@ -501,10 +502,8 @@ section.second ul li:hover h3{
 	color:#fff;
 }
 section.second p{
-	font-weight:300;
-	font-size:14px;font-size:1.4rem;
+	font-weight:400;
 	line-height:30px;line-height:3rem;
-	padding:0 45px;
 
 	opacity:0;
 	visibility:hidden;
@@ -517,7 +516,7 @@ section.second p{
 	opacity:1;
 	visibility:visible;
 	color:#4d4d4d;
-	padding-bottom:25px;
+	padding-bottom:70px;
 }
 section.second ul li:hover p{
 	opacity:1;
@@ -683,12 +682,14 @@ section.four h6{
 	font-size:14px;font-size:1.4rem;
 	color:#4788f2;
 }
-section.four .where .where-img, 
+section.four .where .where-img,
+section.four .where img, 
 section.four .where h5{
 	display:inline-block;
 	vertical-align:middle;
 }
-section.four .where .where-img{margin-right:10px;}
+section.four .where .where-img,
+section.four .where img{margin-right:10px;}
 section.four p{
 	font-weight:300;
 	font-style:italic;
@@ -921,7 +922,7 @@ section .team-slider{
 	position:relative;
 	overflow:hidden;
 	width:100%;height:240px;
-	margin-top:35px;
+	margin-top:70px;
 	-webkit-transition:all .3s linear;
        -moz-transition:all .3s linear;
     	 -o-transition:all .3s linear;
@@ -963,7 +964,7 @@ section .team-slider a i{
 }
 
 section.six {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 section.six .references-galerie li{
 	position:relative;
@@ -1001,7 +1002,8 @@ section.six .references-galerie li .hover-infos{
     	 -o-transition: all .3s ease-in-out;
     		transition: all .3s ease-in-out;
 }
-section.six .references-galerie li .hover-infos img{
+section.six .references-galerie li .hover-infos img,
+section.six .references-galerie li .hover-infos svg{
 	display:block;
 	margin-bottom:30px;
 }
@@ -1036,6 +1038,7 @@ section.six .references-galerie li .active-infos h6{
 section.six .references-galerie li .active-infos p{
 	font-weight:300;
 	font-style:italic;
+	line-height:22px;line-height:2.2rem;
 }
 section.six .references-galerie li .active-infos a{
 	display: inline-block;
