@@ -505,6 +505,7 @@ section.second p{
 	font-weight:300;
 	font-size:14px;font-size:1.4rem;
 	line-height:30px;line-height:3rem;
+	padding:0 10px;
 
 	opacity:0;
 	visibility:hidden;
