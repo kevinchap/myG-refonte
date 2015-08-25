@@ -80,8 +80,20 @@ strong{
 	margin:0 auto;
 }
 .icon-svg path,
-.icon-path path{
+.icon-path path,
+.icon-svg rect,
+.icon-path rect,
+.icon-svg circle,
+.icon-path circle{
 	fill:#f3b32a;
+}
+.expertises section > ul > li:nth-child(2n) .icon-svg path,
+.expertises section > ul > li:nth-child(2n) .icon-path path,
+.expertises section > ul > li:nth-child(2n) .icon-svg rect,
+.expertises section > ul > li:nth-child(2n) .icon-path rect,
+.expertises section > ul > li:nth-child(2n) .icon-svg circle,
+.expertises section > ul > li:nth-child(2n) .icon-path circle{
+	fill:#fff;
 }
 .evenement .icon-svg{
 	background:#da453d;
@@ -1119,16 +1131,6 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	position:absolute;
 	top:0;left:0;
 	width:100%;height:100%;
-
-	opacity:0;
-	visibility:hidden;
-	-webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-.solutions section > ul > li:hover .img-back,
-.expertises section > ul > li:hover .img-back{
 	opacity:1;
 	visibility:visible;
 }
@@ -1171,6 +1173,7 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 
 .expertises section li p{
 	margin:40px 0;
+	padding:0 30px;
 }
 .expertises li .chiffre{
 	font-weight:700;
@@ -1187,14 +1190,11 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	font-weight:700;
 	margin-top:10px;
 }
-.expertises li:hover .chiffre,
-.expertises section li:hover p,
-.expertises section li:hover h3,
-.expertises section li:hover h4{
+.expertises section > ul > li:nth-child(2n) .chiffre,
+.expertises section > ul > li:nth-child(2n) p,
+.expertises section > ul > li:nth-child(2n) h3,
+.expertises section > ul > li:nth-child(2n) h4{
 	color:#fff;
-}
-.expertises section li:hover .icon-svg{
-	background-color:#fff;
 }
 .expertises section .services{
 	position:relative;
@@ -1211,7 +1211,7 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 	position:relative;
 	width:100%;
 	max-height:270px;height:100%;
-	background:url(../img/back-expertises-contact.jpg) no-repeat center;
+	background:#fff;
 	background-size:cover;
 	text-align:center;
 }
@@ -1226,22 +1226,22 @@ section.six .references-galerie li:last-child .reference-cta a:hover{
 .expertises section.question h6{
 	font-weight:300;
 	font-size:22px;font-size:2.2rem;
-	color:#fff;
 }
 .expertises section.question a{
 	display: inline-block;
     padding: 20px 50px;
     margin-top: 37px;
-    border: 1px solid rgb(255,255,255);
-    border: 1px solid rgba(255,255,255,.3);
+    color:#f3b32a;
+    border: 1px solid rgb(243,179,42);
+    border: 1px solid rgba(243,179,42,.3);
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 .expertises section.question a:hover{
-	border: 1px solid rgb(255,255,255);
-    border: 1px solid rgba(255,255,255,1);
+	border: 1px solid rgb(243,179,42);
+    border: 1px solid rgba(243,179,42,1);
 }
 
 .blog .articles{
