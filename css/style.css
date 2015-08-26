@@ -441,6 +441,9 @@ section.formats{
 section.first p{
 	color:#4d4d4d;
 }
+.evenement section.first p{
+	margin-top:40px;
+}
 
 section.second ul li{
 	display:inline-block;
@@ -1285,10 +1288,11 @@ section > ul > li:nth-child(2n) a:hover{
 	margin-top:37px;
 }
 .evenement section.abonnement input[type="text"]{
-	padding:18px 30px;
+	padding:19px 20px;
 	border:1px solid #e5e5e5;
-	font-weight:700;
-	font-size:14px;font-size:1.4rem;
+	font-weight: 500;
+    font-size: 12px;font-size: 1.2rem;
+    color: #bfbfbf;
 	display:inline-block;
 	vertical-align:top;
 	min-width:300px;
