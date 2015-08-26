@@ -854,6 +854,9 @@ section.five form input[type="text"], section.five form textarea{
 	font-size:12px;font-size:1.2rem;
 	color:#bfbfbf;
 	padding:20px 15px;
+	-webkit-appearance: none;
+    border-radius: 0;
+	border:none;
 	border:1px solid #ededed;
 	margin:10px 0;
 }
@@ -931,6 +934,9 @@ input[type="submit"]{
 	color:#1e9c5b;
 	text-transform:uppercase;
 	cursor:pointer;
+	-webkit-appearance: none;
+    border-radius: 0;
+	border:none;
 
 	border:1px solid #c7e6d6;
 	-webkit-transition:all .3s ease-in-out, background 0s 0s ease;
@@ -1000,6 +1006,10 @@ section .team-slider a i{
 
 section.six {
     padding-top: 80px;
+}
+.a-propos section.six .content > p{
+	color:#333;
+	margin-bottom:50px;
 }
 section.six .references-galerie li{
 	position:relative;
@@ -1806,6 +1816,54 @@ footer .content .social li a.viadeo{
 	@media screen and (max-width: 1024px) {
 		.content{padding:0 10px;}
 
+		section.second ul li,
+		section.second ul li:first-child, 
+		section.second ul li:last-child,
+		.a-propos section.second ul li:nth-child(4), 
+		.a-propos section.second ul li:last-child{
+			border:none !important;
+			border-top:1px solid #e5e5e5;
+			border-right:1px solid #e5e5e5;
+			border-color:#e5e5e5;
+		}
+
+		section.second ul li{
+			border-color:#f3b32a;
+			background-color:#f3b32a;
+		}
+		.evenement section.second ul li{
+			border-color:#da453d;
+			background-color:#da453d;
+		}
+		section.second ul li .expertise-li-content{
+			max-height:1000px;
+		}
+		section.second ul li .icon svg path{
+			fill:#fff;
+		}
+		.evenement section.second ul li .icon-svg path,
+		.evenement section.second ul li .icon-path path,
+		.evenement section.second ul li .icon-svg rect,
+		.evenement section.second ul li .icon-path rect,
+		.evenement section.second ul li .icon-svg circle,
+		.evenement section.second ul li .icon-path circle{
+			fill:#fff;
+		}
+		.a-propos section.second ul li .icon-svg{
+			background-color:#fff;
+		}
+		section.second ul li h3{
+			color:#fff;
+		}
+		section.second ul li p{
+			opacity:1;
+			visibility:visible;
+		}
+		section.second ul li a{
+			opacity:1;
+			visibility:visible;
+		}
+
 		section.four .content{
 			width:calc(100% - 100px);
 		}
@@ -2001,7 +2059,7 @@ footer .content .social li a.viadeo{
 	}
 	@media screen and (max-width: 580px) {
 		header{
-			padding-top:76px;
+			padding-top:120px;
 			position:static;
 			width:100%;height:auto;
 		}
@@ -2016,11 +2074,30 @@ footer .content .social li a.viadeo{
 		    transform: translate(0,0);
 		}
 
+		section.second ul li,
+		section.second ul li:first-child,
+		section.second ul li:last-child,
+		.a-propos section.second ul li,
+		.a-propos section.second ul li:nth-child(2),
+		.a-propos section.second ul li:nth-child(3),
+		.a-propos section.second ul li:nth-child(4), 
+		.a-propos section.second ul li:last-child{
+		    border: none !important;
+		    border-top: 1px solid #e5e5e5 !important;
+		}
+
 		section.third ul{padding-bottom:20px;}
 		section.third ul li, section.third ul li:first-child, section.third ul li:last-child {
-			margin-top:0;
+			float:none;
+			display:block;
+			margin:0 auto 30px auto;
 		    min-width:auto;
-		    max-width:100px;
+		}
+		section.third ul li .cross{margin-top:10px;}
+
+		section.four h2 {
+		    max-width: 220px;
+		    margin: 0 auto 50px auto;
 		}
 
 		section.five form .left, section.five form .right{
@@ -2037,9 +2114,22 @@ footer .content .social li a.viadeo{
 			display:block;
 			width:100%;
 		}
+		.submit-anim{width:160px;}
+
+		section.six .references-galerie li .reference-item,
+		section.six .references-galerie li .hover-infos{
+			opacity:1;
+			visibility:visible;
+		}
+		section.six .references-galerie li .hover-infos img, section.six .references-galerie li .hover-infos svg {
+		    margin-bottom: 0;
+		}
+
+		.solutions section li .buttons{display:inline-block;}
 
 		.evenement .formats img{
 			width:100%;
+			opacity:.25;
 		}
 		.evenement .formats li:nth-child(2) img{margin-left:0;}
 		.evenement .format-title{
@@ -2061,6 +2151,14 @@ footer .content .social li a.viadeo{
 			font-weight:700;
 			margin-top:20px;
 		}
+		.evenement section.four .where .where-img, .evenement section.four .where img{
+			display:block;
+			margin:0 auto;
+		}
+		.evenement section.abonnement input[type="text"]{
+			-webkit-appearance: none;
+			border-radius: 0;
+		}
 
 		footer .content > ul.menu-footer > li{
 			display:block;
@@ -2068,6 +2166,7 @@ footer .content .social li a.viadeo{
 			text-align:center;
 		}
 		footer .content > ul.menu-footer > li:last-child{
+			display:inline-block;
 			margin-top:30px;
 		}
 	}
@@ -2139,13 +2238,16 @@ footer .content .social li a.viadeo{
 		}
 
 		section.six .references-galerie li{
-			max-height:250px;
+			max-height:320px;
 		}
 		section.six .references-galerie li .active-infos img{
 			margin:20px 0 10px 0;
 		}
 		section.six .references-galerie li .active-infos a {
 		    margin-top:20px;
+		}
+		section.six .references-galerie li:last-child .reference-cta h6{
+			padding:0 10px;
 		}
 	}
 	@media screen and (max-width: 350px) {
