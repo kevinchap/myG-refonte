@@ -1355,10 +1355,66 @@ section > ul > li:nth-child(2n) a:hover{
 	vertical-align:top;
 	width:20%;
 }
-.digital{color:#f3b32a;}
-.business{color:#da453d;}
-.testimonials{color:#4788f2;}
-.event{color:#1e9c5b;}
+.blog .articles .articles-categories li a{
+	display:block;
+	height:50px;line-height:50px;
+	border-style: solid;
+    border-width: 1px;
+    border-color:transparent;
+	box-sizing:border-box;
+	-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.digital{
+	color:#f3b32a;
+}
+.blog .articles .articles-categories li a.digital:hover{
+	color:#f3b32a;
+	border-color:#f3b32a !important;
+}
+.blog .articles .articles-categories li a.digital.active{
+	color:#f3b32a;
+	border-color:#f3b32a;
+}
+.business{
+	color:#da453d;
+}
+.blog .articles .articles-categories li a.business:hover{
+	color:#da453d;
+	border-color:#da453d !important;
+}
+.blog .articles .articles-categories li a.business.active{
+	color:#da453d;
+	border-color:#da453d;
+}
+.testimonials{
+	color:#4788f2;
+}
+.blog .articles .articles-categories li a.testimonials:hover{
+	color:#4788f2;
+	border-color:#4788f2 !important;
+}
+.blog .articles .articles-categories li a.testimonials.active{
+	color:#4788f2;
+	border-color:#4788f2;
+}
+.event{
+	color:#1e9c5b;
+}
+.blog .articles .articles-categories li a:hover.event{
+	color:#1e9c5b;
+	border-color:#1e9c5b !important;
+}
+.blog .articles .articles-categories li a.event.active{
+	color:#1e9c5b;
+	border-color:#1e9c5b;
+}
+.blog .articles .articles-categories li a.nc{
+	color:#000;
+	border-color:transparent;
+}
 .list .content{
 	max-width:1024px;
 }
@@ -1426,6 +1482,7 @@ section > ul > li:nth-child(2n) a:hover{
 .article .article-header{
 	width:100%;height:600px;
 	position:relative;
+	z-index:-1;
 	background:url(../img/back-article-header.jpg) no-repeat center;
 	background-size:cover;
 }
@@ -1486,7 +1543,6 @@ section > ul > li:nth-child(2n) a:hover{
 	width:100%;
 	padding:60px 0 80px 0;
 	margin:0 auto;
-	position:relative;
 	background:#fff;
 	margin-top:-45px;
 	border-bottom:1px solid #e5e5e5;
@@ -1533,7 +1589,7 @@ section > ul > li:nth-child(2n) a:hover{
 .article-content .buttons{
 	position:absolute;
 	z-index:2;
-	left:30px;top:60px;
+	left:12%;
 }
 .article-content .buttons button{
 	position:relative;
@@ -1628,6 +1684,7 @@ section > ul > li:nth-child(2n) a:hover{
 .article .list .article-infos h3{
 	font-weight:100;
 	font-size:20px;font-size:2.0rem;
+	text-transform:none;
 }
 
 .evenement .formats{
@@ -1823,15 +1880,14 @@ footer .content .social li a.viadeo{
 			border-right:1px solid #e5e5e5;
 			border-left:1px solid #e5e5e5;
 		}
+
+		.article-content .buttons{left:10%;}
 	}
-	@media screen and (max-width: 1085px) {
-		/*nav #logo{
-			position:absolute;
-			left:10px;
-			-webkit-transform: translate(0, 0);
-				-ms-transform: translate(0, 0);
-					transform: translate(0, 0);
-		}*/
+	@media screen and (max-width: 1140px) {
+		.article-content .buttons{left:8%;}
+	}
+	@media screen and (max-width: 1185px) {
+		.article-content .buttons{left:6%;}
 	}
 	@media screen and (max-width: 1024px) {
 		.content{padding:0 10px;}
@@ -1919,7 +1975,7 @@ footer .content .social li a.viadeo{
 		}
 
 		.article-content .buttons{
-			position:static;
+			position:static !important;
 			text-align:center;
 		}
 		.article-content .buttons button{
