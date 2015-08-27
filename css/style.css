@@ -1783,22 +1783,27 @@ footer #logo{
 	position:absolute;
 	top:0;left:10px;
 }
-footer .content > ul > li{
+footer .content > .menu-footer{
+	font-size:0;
+	text-align:left;
+}
+footer .content > .menu-footer > li{
 	display:inline-block;
 	vertical-align:top;
 	text-align:left;
-	margin:0 15px;
+	width:16.6%;
 }
-footer .content > ul > li:last-child{
-	margin:0 0 0 15px;
-}
-footer .content ul li a{
+footer .content .menu-footer li a{
 	font-size:10px;font-size:1.0rem;
+	line-height:14px;line-height:1.4rem;
 }
-footer .content > ul > li > ul{
+footer .content > .menu-footer > li > ul{
 	margin-top:10px;
 }
-footer .content > ul > li > ul > li > a{
+footer .content > .menu-footer > li > ul > li{
+	margin-bottom:6px;
+}
+footer .content > .menu-footer > li > ul > li > a{
 	font-weight:400;
 	text-transform:none;
 	color:rgb(255,255,255);
@@ -2008,7 +2013,7 @@ footer .content .social li a.viadeo{
 	}
 	@media screen and (max-width: 768px) {
 		footer .content > ul.menu-footer > li{
-			margin:0 5px;
+			text-align:center;
 		}
 	}
 	@media screen and (max-width: 700px) {
@@ -2238,14 +2243,19 @@ footer .content .social li a.viadeo{
 			border-radius: 0;
 		}
 
+		footer .content > ul.menu-footer{
+			text-align:center;
+		}
 		footer .content > ul.menu-footer > li{
 			display:block;
-			margin:20px 0;
+			margin:20px auto;
 			text-align:center;
 		}
 		footer .content > ul.menu-footer > li:last-child{
 			display:inline-block;
+			text-align:left;
 			margin-top:30px;
+			width:auto;
 		}
 	}
 	@media screen and (max-width: 540px) {
