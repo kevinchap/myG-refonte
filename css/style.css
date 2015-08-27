@@ -84,7 +84,9 @@ strong{
 .icon-svg rect,
 .icon-path rect,
 .icon-svg circle,
-.icon-path circle{
+.icon-path circle,
+.icon-svg polygon,
+.icon-path polygon{
 	fill:#f3b32a;
 }
 .expertises section > ul > li:nth-child(2n) .icon-svg path,
@@ -92,7 +94,9 @@ strong{
 .expertises section > ul > li:nth-child(2n) .icon-svg rect,
 .expertises section > ul > li:nth-child(2n) .icon-path rect,
 .expertises section > ul > li:nth-child(2n) .icon-svg circle,
-.expertises section > ul > li:nth-child(2n) .icon-path circle{
+.expertises section > ul > li:nth-child(2n) .icon-path circle,
+.expertises section > ul > li:nth-child(2n) .icon-svg polygon,
+.expertises section > ul > li:nth-child(2n) .icon-path polygon{
 	fill:#fff;
 }
 .evenement .icon-svg path,
@@ -100,7 +104,9 @@ strong{
 .evenement .icon-svg rect,
 .evenement .icon-path rect,
 .evenement .icon-svg circle,
-.evenement .icon-path circle{
+.evenement .icon-path circle,
+.evenement .icon-svg polygon,
+.evenement .icon-path polygon{
 	fill:#da453d;
 }
 .evenement .icon-svg.white path,
@@ -108,7 +114,9 @@ strong{
 .evenement .icon-svg.white rect,
 .evenement .icon-path.white rect,
 .evenement .icon-svg.white circle,
-.evenement .icon-path.white circle{
+.evenement .icon-path.white circle,
+.evenement .icon-svg.white polygon,
+.evenement .icon-path.white polygon{
 	fill:#fff;
 }
 .cross{
@@ -517,7 +525,9 @@ section.second ul li:hover .icon svg path{
 .evenement section.second ul li:hover .icon-svg rect,
 .evenement section.second ul li:hover .icon-path rect,
 .evenement section.second ul li:hover .icon-svg circle,
-.evenement section.second ul li:hover .icon-path circle{
+.evenement section.second ul li:hover .icon-path circle,
+.evenement section.second ul li:hover .icon-svg polygon,
+.evenement section.second ul li:hover .icon-path polygon{
 	fill:#fff;
 }
 .a-propos section.second ul li:hover .icon-svg{
@@ -1337,7 +1347,7 @@ section > ul > li:nth-child(2n) a:hover{
 	text-transform:uppercase;
 }
 .blog .articles .articles-categories{
-	margin:38px 0 50px 0;
+	margin:50px 0 70px 0;
 	text-align:center;
 }
 .blog .articles .articles-categories li{
@@ -1406,6 +1416,7 @@ section > ul > li:nth-child(2n) a:hover{
 .blog .list .article-infos h3{
 	font-weight:100;
 	font-size:20px;font-size:2.0rem;
+	text-transform:none;
 }
 .blog .list li:nth-child(12n+1) .article-infos h3,
 .blog .list li:nth-child(12n+7) .article-infos h3{
@@ -1426,7 +1437,10 @@ section > ul > li:nth-child(2n) a:hover{
 	-webkit-transform: translate(0, -50%);
 		-ms-transform: translate(0, -50%);
 			transform: translate(0, -50%);
-	margin-top:-45px;
+	margin-top:30px;
+}
+.content-article-header h1{
+	margin-bottom:50px;
 }
 .content-article-header h5{
 	font-weight:700;
@@ -1470,11 +1484,12 @@ section > ul > li:nth-child(2n) a:hover{
 .article-content .content-large{
 	max-width:1024px;
 	width:100%;
-	padding:60px 0;
+	padding:60px 0 80px 0;
 	margin:0 auto;
 	position:relative;
 	background:#fff;
 	margin-top:-45px;
+	border-bottom:1px solid #e5e5e5;
 }
 .article-content .content-large.digital{border-top:3px solid #f3b32a;}
 .article-content .content-large.business{border-top:3px solid #da453d;}
@@ -1492,7 +1507,7 @@ section > ul > li:nth-child(2n) a:hover{
 .article-content h3{
 	font-weight:400;
 	color:#4d4d4d;
-	margin:30px 0 20px 0;
+	margin:70px 0 40px 0;
 }
 .article-content p{
 	font-weight:300;
@@ -1500,7 +1515,7 @@ section > ul > li:nth-child(2n) a:hover{
 	line-height:30px;line-height:3rem;
 }
 .article-content .content-large .content div{
-	margin:40px 0;
+	margin:70px 0;
 }
 .article-content legend{
 	font-weight:300;
@@ -1513,7 +1528,7 @@ section > ul > li:nth-child(2n) a:hover{
 .article-content blockquote{
 	font-weight:400;
 	line-height:30px;line-height:3rem;
-	margin-top:15px;
+	margin-top:30px;
 }
 .article-content .buttons{
 	position:absolute;
@@ -1578,14 +1593,19 @@ section > ul > li:nth-child(2n) a:hover{
 	border-top:1px solid rgba(30, 156, 91, 1);
 }
 .article .list{
+	font-size:0;
+	padding-top:60px;
 	text-align:center;
 }
 .article .list li{
-	width:306px;height:298px;
+	width:48%;height:auto;
 	padding-bottom:14px;
 	display:inline-block;
 	vertical-align:top;
-	margin:0 2%;
+	margin:0;
+}
+.article .list li:first-child{
+	margin-right:4%;
 }
 .article .list li img{
 	width:100%;height:auto;
@@ -1846,7 +1866,9 @@ footer .content .social li a.viadeo{
 		.evenement section.second ul li .icon-svg rect,
 		.evenement section.second ul li .icon-path rect,
 		.evenement section.second ul li .icon-svg circle,
-		.evenement section.second ul li .icon-path circle{
+		.evenement section.second ul li .icon-path circle,
+		.evenement section.second ul li .icon-svg polygon,
+		.evenement section.second ul li .icon-path polygon{
 			fill:#fff;
 		}
 		.a-propos section.second ul li .icon-svg{
