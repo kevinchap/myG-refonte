@@ -11,6 +11,7 @@ body{
 	font-size:16px;font-size:1.6em;
 	height:100%;width:100%;
 }
+body.mentions{background:#0c182c;}
 .content{
 	display:block;
 	position:relative;
@@ -42,7 +43,7 @@ h2{
 	font-size:20px;font-size:2rem;
 	text-align:center;
 }
-.a-propos h2, .blog h2, .evenement h2{padding-bottom:0;margin-top:15px;}
+.a-propos h2, .blog h2, .evenement h2, .mentions h2{padding-bottom:0;margin-top:15px;}
 .evenement h2{margin-bottom:0;}
 h2:after{
 	content:'';
@@ -55,7 +56,7 @@ h2:after{
 		-ms-transform: translate(-50%, 0);
 			transform: translate(-50%, 0);
 }
-.a-propos h2:after, .blog h2:after, .evenement h2:after{
+.a-propos h2:after, .blog h2:after, .evenement h2:after, .mentions h2:after{
 	display:none;
 }
 h3{
@@ -205,6 +206,9 @@ nav{
 }
 .blog nav{
 	background-color:#0c182c;
+}
+.mentions nav{
+	border-bottom:1px solid #253042;
 }
 nav.on{
 	-webkit-transition:background-color .3s ease, height .4s ease;
@@ -446,8 +450,36 @@ section.first,
 section.formats{
 	padding:80px 0;
 }
+.mentions section.first{
+	padding-top:176px;
+}
+.mentions section.first h2{
+	color:#fff;
+	margin-bottom:50px;
+}
+.mentions section.first h3{
+	color:#fff;
+	text-align:center;
+	margin-bottom:30px;
+}
+.mentions section.first h4{
+	color:#f3b32a;
+	text-align:center;
+	margin-top:-20px;
+	margin-bottom:30px;
+}
 section.first p{
 	color:#4d4d4d;
+}
+.mentions section.first p{
+	color:#fff;
+	font-size:14px;font-size:1.4rem;
+}
+.mentions section.first p a{
+	text-transform:none;
+	color:#f3b32a;
+	font-weight:400;
+	font-size:14px;font-size:1.4rem;
 }
 .evenement section.first p{
 	margin-top:40px;
@@ -1777,6 +1809,9 @@ section > ul > li:nth-child(2n) a:hover{
 footer{
 	background:#0c182c;
 	padding:20px 0;
+}
+.mentions footer{
+	border-top:1px solid #253042;
 }
 footer .content{
 	padding-top:16px;
