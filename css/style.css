@@ -558,9 +558,11 @@ section.second p{
     		transition:all .3s ease-in-out;
 }
 .a-propos section.second .content p{
+	font-weight:400;
+	font-size:16px;font-size:1.6rem;
 	opacity:1;
 	visibility:visible;
-	color:#4d4d4d;
+	color:#333;
 	padding-bottom:70px;
 }
 section.second ul li:hover p{
@@ -1094,6 +1096,7 @@ section.six .references-galerie li .active-infos p{
 	font-weight:300;
 	font-style:italic;
 	line-height:22px;line-height:2.2rem;
+	padding:0 10px;
 }
 section.six .references-galerie li .active-infos a{
 	display: inline-block;
@@ -1692,7 +1695,7 @@ section > ul > li:nth-child(2n) a:hover{
 	padding-bottom:0;
 }
 .evenement .formats ul{
-	margin-top:40px;
+	margin-top:70px;
 }
 .evenement .formats li{position:relative;}
 .evenement .formats img{

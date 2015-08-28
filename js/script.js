@@ -1,6 +1,17 @@
 "use strict";
 
 $(function(){
+    // SCROLL TO FIRST SECTION
+    if($('a.scrollTo').length>0){
+        $('a.scrollTo').click(function(){
+            console.log($('section.scrollTo').offset().top);
+            $('html, body').animate({
+                scrollTop:$('section.scrollTo').offset().top
+            }, 'slow');
+            return false;
+        });
+    }
+
     if($('.article-content .buttons').length>0){
        $('.article-content .buttons').css('top',$('.article-content').offset().top+60+'px'); 
     }
