@@ -1,15 +1,94 @@
 "use strict";
 
 $(function(){
+
+    // LOADER
+    var loaderAnim = new TimelineMax();
+    loaderAnim.to("#circle-loader", 3, {css:{height: '100%'}, ease:Linear.none})
+        .to("#path-loader", 2, {css:{height: '100%'}, ease:Linear.none}, "-=2.5")
+        .to("#loader-container", 0.8, {y:-200, ease:Linear.none})
+        .to("#loader", 0.8, {y:-$(window).innerHeight(), ease:Quad.easeInOut,
+        onComplete:function(){
+            $('body').removeClass('noscroll');
+        }}, "-=1");
+
+    // Set padding top body && scroll header anim
+    $('body.home, body.a-propos, body.expertises, body.solutions, body.evenement').css('padding-top', $(window).innerHeight()+'px');
+
+    if($('body').hasClass('home') || $('body').hasClass('a-propos') || $('body').hasClass('expertises') || $('body').hasClass('solutions') || $('body').hasClass('evenement')){
+        var controller = new ScrollMagic.Controller();
+        var scene = new ScrollMagic.Scene({triggerElement: "#headerAnimTrigger", triggerHook: 'onEnter', duration: $(window).innerHeight()})
+                    .setTween("header", {alpha: 0})
+                    .addTo(controller);
+    }
+
+    // TRANSITION PAGE ANIM
+    $('a').click(function(event){
+        // if(isPageAllowed(event.target.getAttribute("href"))){
+            launchBorderAnimOut(event.target.getAttribute("href"));
+            return false;
+        // }
+    });
+
+    // function isPageAllowed(redirectUrl){
+    //     console.log()
+    // }
+
+    function getBaseURL(){
+       return location.protocol + "//" + location.hostname + 
+          (location.port && ":" + location.port) + "/";
+    }
+
+    function launchBorderAnimOut(redirectUrl){
+        var url = redirectUrl;
+        $('#borderAnim').css({
+           'display' : 'block',
+           'width' : $('nav ul li.current').width()+'px',
+           'left' : $('nav ul li.current').offset().left+'px',
+           'background-color' : $('nav ul li.current a').css("color")
+        });
+        var borderAnimOut = new TimelineMax();
+        borderAnimOut.to("#borderAnim", 1, {css:{width: '100%', left: '0'}, ease:Quad.easeInOut,
+            onComplete:function(){
+                if(url !== null){
+                    window.location.replace(getBaseURL()+'/myG/My%20fly%20-%20refonte/'+url);
+                }else{
+                    window.location.replace(getBaseURL()+'/myG/My%20fly%20-%20refonte/');
+                }
+            }});
+    }
+
+    // function getBaseURL () {
+    //     var baseURL = "";
+    //     var baseDocument = "index.html";
+
+    //     if (document.getElementsByTagName('base').length > 0) {
+    //         baseURL = document.getElementsByTagName('base')[0].href.replace(baseDocument, "");
+    //     } else {
+    //         baseURL = location.protocol + "//" + location.hostname + (location.port && ":" + location.port) + "/";
+    //     }
+
+    //     return baseURL;
+    // }
+
     // SCROLL TO FIRST SECTION
     if($('a.scrollTo').length>0){
         $('a.scrollTo').click(function(){
-            console.log($('section.scrollTo').offset().top);
             $('html, body').animate({
                 scrollTop:$('section.scrollTo').offset().top
             }, 'slow');
             return false;
         });
+    }
+
+    if($(window).innerWidth()>1024 && $('body').hasClass('article')){
+        changeLeftArticleButtons();
+        $(window).resize(function(){
+            changeLeftArticleButtons();
+        });
+        function changeLeftArticleButtons(){
+            $('.article-content .buttons').css('left',$('.article-content .content-large.business').offset().left+30+'px'); 
+        }
     }
 
     if($('.article-content .buttons').length>0){
