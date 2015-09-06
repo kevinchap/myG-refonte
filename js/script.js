@@ -55,6 +55,11 @@ $(function(){
                 }else{
                     window.location.replace(getBaseURL()+'/myG/My%20fly%20-%20refonte/');
                 }
+                // if(url !== null){
+                //     window.location.replace(getBaseURL()+'myGrefonte/'+url);
+                // }else{
+                //     window.location.replace(getBaseURL()+'myGrefonte/');
+                // }
             }});
     }
 
